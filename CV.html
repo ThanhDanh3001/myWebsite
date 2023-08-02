@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<title>CV</title>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+         showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+         showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+         let i;
+         let slides = document.getElementsByClassName("mySlides");
+         let dots = document.getElementsByClassName("demo");
+         let captionText = document.getElementById("caption");
+         if (n > slides.length) {slideIndex = 1}
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";
+         }
+         for (i = 0; i < dots.length; i++) {
+         dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex-1].style.display = "block";
+         dots[slideIndex-1].className += " active";
+         captionText.innerHTML = dots[slideIndex-1].alt; }
+        </script>
+    </style>
+<body>
+       <div class="avatar">
+        <img width="200" src="image/avatar.jpg" alt="">
+       </div>
+        <div class="TÊN">
+        <h1>HỒ NGUYỄN THÀNH DANH</h1>
+        </div>
+        <div class="left">
+            <div class="THÔNGTIN">
+                <h2>THÔNG TIN LIÊN HỆ</h2>
+                <li>Sđt: 0359971440</li>
+                <li>Email: thanhdanh3001@gmail.com</li>
+                <li>Địa chỉ: Tân An, Thủ Dầu Một, Bình Dương</li>
+                <li>Ngày sinh: 30/01/2003</li>
+                <li>Giới tính: Nam</li>
+                <p><b><a href="https://www.facebook.com/honguyenthanhdanh" target="_blank">Here is my facebook link </a></b>
+            </div>
+            <div class="HỌCVẤN">
+                <h2>TRÌNH ĐỘ HỌC VẤN</h2>
+                <li>Đại học Nguyễn Tất Thành</li>
+                <li>2021 - 2025</li>
+                <li>Ngành học: Công nghệ thông tin</li>
+                <li>Loại: Giỏi</li>
+            </div>
+        </div>
+    <div class="right">
+       <div class="CHỨNGCHỈ">
+            <h2>CHỨNG CHỈ</h2>
+                <h4>Chứng chỉ MOS</h4>
+                <h4>Chứng chỉ 6 NEP tiếng anh</h4>
+        </div>
+        <div class="SỞTHÍCH">
+            <h2>SỞ THÍCH</h2>
+                <li>Đá bóng</li>
+                <li>Nghe nhạc</li>
+                <li>Xem phim</li>
+                <li>Chơi game</li>
+                <li>Đi dạo</li>
+        </div>
+    </div>
+    <h2 style="text-align:center">Slideshow Gallery</h2>
+<div class="container">
+ <div class="mySlides">
+ <div class="numbertext">1 / 6</div>
+ <img src="image/anh1.jpg" style="width:100%">
+ </div>
+ <div class="mySlides">
+ <div class="numbertext">2 / 6</div>
+ <img src="image/anh2.jpg" style="width:100%">
+ </div>
+ <div class="mySlides">
+ <div class="numbertext">3 / 6</div>
+ <img src="image/anh3.jpg" style="width:100%">
+ </div>
+ <div class="mySlides">
+ <div class="numbertext">4 / 6</div>
+ <img src="image/anh4.jpg" style="width:100%">
+ </div>
+ <div class="mySlides">
+ <div class="numbertext">5 / 6</div>
+ <img src="image/anh5.jpg" style="width:100%">
+ </div>
+ <div class="mySlides">
+ <div class="numbertext">6 / 6</div>
+ <img src="image/anh6.jpg" style="width:100%">
+ </div>
+ 
+ <a class="prev" onclick="plusSlides(-1)">❮</a>
+ <a class="next" onclick="plusSlides(1)">❯</a>
+ <div class="caption-container">
+ <p id="caption"></p>
+ </div>
+ <div class="row">
+ <div class="column">
+ <img class="demo cursor" src="image/anh1.jpg" style="width:100%"
+onclick="currentSlide(1)" alt="The Woods">
+ </div>
+ <div class="column">
+ <img class="demo cursor" src="image/anh2.jpg" style="width:100%"
+onclick="currentSlide(2)" alt="Cinque Terre">
+ </div>
+ <div class="column">
+ <img class="demo cursor" src="image/anh3.jpg" style="width:100%"
+onclick="currentSlide(3)" alt="Mountains and fjords">
+ </div>
+ <div class="column">
+ <img class="demo cursor" src="image/anh4.jpg" style="width:100%"
+onclick="currentSlide(4)" alt="Northern Lights">
+ </div>
+ <div class="column">
+ <img class="demo cursor" src="image/anh5.jpg" style="width:100%"
+onclick="currentSlide(5)" alt="Nature and sunrise">
+ </div> 
+ <div class="column">
+ <img class="demo cursor" src="image/anh6.jpg" style="width:100%"
+onclick="currentSlide(6)" alt="Snowy Mountains">
+ </div>
+ </div>
+</div>
+</body>
+</html>
